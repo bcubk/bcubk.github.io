@@ -25,11 +25,22 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
+# Social media
+twitter_username:
+twitter_image:
+facebook_app_id:
+facebook_image:
+google_analytics:
+comments: false
+
 theme: jekyll-whiteglass
 plugins:
   - jekyll-archives
   - jekyll-paginate
   - jekyll-sitemap
+
+exclude:
+  - README.md
 
 permalink: /:year/:month/:day/:title/
 paginate_path: /posts/:num/
@@ -43,3 +54,7 @@ jekyll-archives:
   permalinks:
     category: /categories/:name/
     tag: /tags/:name/
+
+# jekyll-paginate
+paginate_path: /posts/:num/
+paginate: 5
